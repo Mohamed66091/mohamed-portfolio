@@ -1,0 +1,26 @@
+/* AOS - Animate On Scroll (minified) */
+[data-aos] {
+    opacity: 0;
+    transition-property: transform, opacity;
+  }
+  
+  [data-aos].aos-animate {
+    opacity: 1;
+  }
+  
+  [data-aos=fade-up] {
+    transform: translateY(20px);
+  }
+  
+  [data-aos=fade-down] {
+    transform: translateY(-20px);
+  }
+  
+  [data-aos=fade-right] {
+    transform: translateX(-20px);
+  }
+  
+  [data-aos=fade-left] {
+    transform: translateX(20px);
+  }
+  
