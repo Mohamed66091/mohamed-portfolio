@@ -4,7 +4,6 @@ const themeToggle = document.querySelector(".theme-toggle");
 const themeIcon = document.querySelector(".theme-icon");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
-const prefersLight = window.matchMedia("(prefers-color-scheme: light)");
 const progressBar = document.querySelector(".scroll-progress span");
 const sections = document.querySelectorAll("main section[id]");
 const navAnchors = document.querySelectorAll(".nav-links a");
@@ -23,7 +22,7 @@ function setTheme(theme) {
 }
 
 const savedTheme = localStorage.getItem("portfolio-theme");
-setTheme(savedTheme || (prefersLight.matches ? "light" : "dark"));
+setTheme(savedTheme || "dark");
 
 window.addEventListener("pointermove", (event) => {
   siteCursor.classList.add("visible");
