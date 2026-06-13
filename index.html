@@ -1,96 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohamed Rizk | Backend Developer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="aos.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Mohamed Rizk, a Computer Science and AI student focused on backend development, data science, and computer vision.">
+  <meta name="theme-color" content="#07111f">
+  <title>Mohamed Rizk | Software, Data & AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
-  <script defer src="aos.min.js"></script>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NW4Q3BKVEV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NW4Q3BKVEV');
-</script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-  <!-- Toggle Theme -->
-  <div class="theme-toggle" onclick="toggleTheme()">🌓</div>
-
-  <!-- Header / Hero -->
-  <header class="hero" data-aos="fade-up">
-    <h1>Mohamed Rizk</h1>
-    <p><span class="typewriter">Backend Developer | Java & MySQL</span></p>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Mohamed Rizk home">MR<span>.</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="theme-toggle" type="button" aria-label="Switch to light theme">
+        <span class="theme-icon" aria-hidden="true">SUN</span>
+      </button>
+    </nav>
   </header>
 
-  <!-- About Section -->
-  <section class="about" data-aos="fade-right">
-    <h2>About Me</h2>
-    <img src="profile.jpg" alt="Profile Photo" class="profile-pic" />
-    <p>
-      I’m a second-year Computer Science student at BUE, passionate about backend development, clean code, and real-world software projects.
-      I enjoy building systems using Java, MySQL, and strong logic.
-    </p>
-  </section>
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Open to internships and entry-level roles</p>
+          <h1>I build software that turns <em>data</em> into useful systems.</h1>
+          <p class="hero-intro">
+            I am Mohamed Rizk, a senior-year Computer Science and AI student in Cairo,
+            working across backend development, data science, and computer vision.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">-&gt;</span></a>
+            <a class="button button-secondary" href="Mohamed_Rizk_CV.docx" download>Download CV</a>
+          </div>
+          <div class="hero-links" aria-label="Social links">
+            <a href="https://github.com/Mohamed66091" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/mohamed-rezk-aba5aa280/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:mohamedrezk66091@gmail.com">Email</a>
+          </div>
+        </div>
 
-  <!-- Projects Section -->
-  <section class="projects" data-aos="fade-left">
-      <h2>Projects</h2>
-      <div class="project-grid">
-  
-        <div class="project-card">
-          <h3>student Management System</h3>
-          <p>Java Swing + MySQL CRUD App with GUI</p>
-          <a href="https://github.com/Mohamed66091/student-management-system" target="_blank">View on GitHub</a>
+        <div class="hero-visual reveal">
+          <div class="portrait-frame">
+            <img src="profile.jpg" alt="Mohamed Rizk" width="684" height="1024">
+            <div class="portrait-label">
+              <span>Cairo, Egypt</span>
+              <strong>CS &amp; AI</strong>
+            </div>
+          </div>
+          <div class="floating-card floating-card-top">
+            <span class="card-dot"></span>
+            <div><strong>3.4 GPA</strong><small>BUE, expected 2027</small></div>
+          </div>
+          <div class="floating-card floating-card-bottom">
+            <strong>Java + Python</strong>
+            <small>Backend, data and vision</small>
+          </div>
         </div>
-  
-        <div class="project-card">
-          <h3>Backend API Simulation</h3>
-          <p>Console-only Java app simulating REST methods</p>
-          <a href="https://github.com/Mohamed66091/BackendAPISimulation" target="_blank">View on GitHub</a>
-        </div>
-  
-        <div class="project-card">
-          <h3>Barber Shop System</h3>
-          <p>Full CRUD system using Java Swing + MySQL</p>
-          <a href="https://github.com/Mohamed66091/Barber-Shop-Management-System" target="_blank">View on GitHub</a>
-        </div>
-  
-        <div class="project-card">
-          <h3>Pharmacy Management System</h3>
-          <p>GUI-based pharmacy inventory system</p>
-          <a href="https://github.com/Mohamed66091/Pharmacy-Management-System" target="_blank">View on GitHub</a>
-        </div>
-  
-        <div class="project-card">
-          <h3>School Management System (File-based)</h3>
-          <p>Java Swing application with file-based storage</p>
-          <a href="https://github.com/Mohamed66091/School-Managment-System" target="_blank">View on GitHub</a>
-        </div>
-  
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- Contact Section -->
-  <section class="contact" data-aos="fade-up">
-    <h2>Contact</h2>
-    <div class="contact-links">
-      <a href="mailto:mohamedrezk66091@gmail.com">📧 Email</a>
-      <a href="https://github.com/Mohamed66091" target="_blank">🐙 GitHub</a>
-      <a href="https://linkedin.com/in/mohamed-rezk-aba5aa280/" target="_blank">🔗 LinkedIn</a>
-    </div>
-  </section>
+    <section class="section" id="about">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="section-number">01 / About</p>
+          <h2>Engineering curiosity,<br>grounded in real projects.</h2>
+        </div>
+        <div class="about-grid">
+          <p class="about-lead reveal">
+            I combine software engineering fundamentals with hands-on work in
+            machine learning and data analysis.
+          </p>
+          <div class="about-copy reveal">
+            <p>
+              At the British University in Egypt, I have built Java desktop systems backed by
+              MySQL, trained YOLO object-detection models for workplace safety, and analyzed
+              CDC surveillance data through an end-to-end CRISP-DM workflow.
+            </p>
+            <p>
+              I enjoy moving from a messy problem to a clear, maintainable solution, whether
+              that means designing an application architecture, cleaning a dataset, or
+              measuring a model's performance.
+            </p>
+          </div>
+        </div>
+        <div class="stats reveal">
+          <div><strong>1,420+</strong><span>PPE images processed</span></div>
+          <div><strong>2,500</strong><span>CDC records analyzed</span></div>
+          <div><strong>9</strong><span>PPE detection classes</span></div>
+          <div><strong>40 hrs</strong><span>Microsoft web camp</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="shell">
+        <div class="section-heading split-heading reveal">
+          <div>
+            <p class="section-number">02 / Selected projects</p>
+            <h2>Work that connects<br>code with outcomes.</h2>
+          </div>
+          <a class="text-link" href="https://github.com/Mohamed66091" target="_blank" rel="noopener noreferrer">All GitHub projects -&gt;</a>
+        </div>
+
+        <div class="featured-projects">
+          <article class="project-feature project-vision reveal">
+            <div class="project-index">01</div>
+            <div class="project-content">
+              <p class="project-type">Computer Vision / 2025-2026</p>
+              <h3>Hard Hat &amp; Safety Gear Detection</h3>
+              <p>
+                Built an image-processing and object-detection workflow spanning preprocessing,
+                augmentation, YOLOv5/YOLOv8 prototype training, and interactive model comparison
+                through a Streamlit interface.
+              </p>
+              <ul class="tag-list" aria-label="Technologies">
+                <li>Python</li><li>OpenCV</li><li>YOLO</li><li>PyTorch</li><li>Streamlit</li>
+              </ul>
+              <div class="project-actions">
+                <a href="https://github.com/Mohamed66091/HardHatDetection" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+                <a href="assets/ppe-detection/HardHatDetection.ipynb" download>Download notebook</a>
+              </div>
+            </div>
+            <div class="project-art vision-art">
+              <img src="assets/ppe-detection/ppe-multiclass-yolov8.jpg" alt="YOLOv8 detecting people, hardhats, safety vests, gloves, and shoes">
+              <span class="art-label">OBJECT DETECTION / LIVE</span>
+            </div>
+          </article>
+
+          <article class="data-case-study vision-case-study reveal" aria-labelledby="vision-case-study-title">
+            <div class="case-study-copy">
+              <p class="project-type">Case study / Computer vision</p>
+              <h3 id="vision-case-study-title">A complete path from pixels to predictions.</h3>
+              <p>
+                The notebook explores grayscale conversion, histograms, Gaussian blur,
+                sharpening, and thresholding before applying flips, rotation, translation,
+                cropping, brightness changes, and blur augmentation. Four prototype runs then
+                compare YOLOv5 and YOLOv8 across two safety datasets.
+              </p>
+              <dl class="case-study-facts">
+                <div><dt>Best prototype</dt><dd>YOLOv8, Team A dataset</dd></div>
+                <div><dt>Validation</dt><dd>0.867 mAP@0.5 and 0.896 precision</dd></div>
+                <div><dt>Application</dt><dd>Upload, threshold control, and side-by-side model comparison</dd></div>
+              </dl>
+            </div>
+            <div class="analysis-gallery vision-gallery">
+              <figure class="analysis-figure analysis-figure-wide">
+                <a href="assets/ppe-detection/ppe-multiclass-yolov8.jpg" target="_blank">
+                  <img src="assets/ppe-detection/ppe-multiclass-yolov8.jpg" alt="Multiclass YOLOv8 PPE detections in an industrial setting" loading="lazy">
+                </a>
+                <figcaption>Multiclass inference across people, hardhats, vests, gloves, and shoes.</figcaption>
+              </figure>
+              <figure class="analysis-figure">
+                <a href="assets/ppe-detection/hardhat-yolov8.jpg" target="_blank">
+                  <img src="assets/ppe-detection/hardhat-yolov8.jpg" alt="YOLOv8 hard-hat detections with confidence scores" loading="lazy">
+                </a>
+                <figcaption>Hard-hat detection with confidence overlays.</figcaption>
+              </figure>
+              <figure class="analysis-figure">
+                <a href="assets/ppe-detection/confusion-matrix.png" target="_blank">
+                  <img src="assets/ppe-detection/confusion-matrix.png" alt="Normalized confusion matrix for hard-hat and no-hard-hat classes" loading="lazy">
+                </a>
+                <figcaption>Normalized validation confusion matrix.</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="project-feature project-data reveal">
+            <div class="project-index">02</div>
+            <div class="project-content">
+              <p class="project-type">Data Science / 2025-2026</p>
+              <h3>COVID-19 Case Surveillance Analysis</h3>
+              <p>
+                A collaborative two-phase analysis of CDC surveillance data. I worked from
+                individual case records to an integrated state-level dataset, combining data
+                cleaning, web scraping, exploratory analysis, and statistical inference.
+              </p>
+              <ul class="tag-list" aria-label="Technologies">
+                <li>Pandas</li><li>NumPy</li><li>Seaborn</li><li>SciPy</li><li>BeautifulSoup</li>
+              </ul>
+              <div class="project-actions">
+                <a href="https://github.com/Mohamed66091/-COVID-19-Data-Science-Project" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+                <a href="assets/covid-analysis/COVID19_Phase_1.ipynb" download>Phase 1 notebook</a>
+                <a href="assets/covid-analysis/COVID19_Phase_2.ipynb" download>Phase 2 notebook</a>
+              </div>
+            </div>
+            <div class="project-art data-art">
+              <img src="assets/covid-analysis/correlation-heatmap.png" alt="Correlation heatmap across Phase 1 and Phase 2 COVID-19 metrics">
+              <span class="chart-axis">INTEGRATED METRICS / 20 STATES</span>
+            </div>
+          </article>
+
+          <article class="data-case-study reveal" aria-labelledby="covid-case-study-title">
+            <div class="case-study-copy">
+              <p class="project-type">Case study / My contribution</p>
+              <h3 id="covid-case-study-title">From raw records to statistical evidence.</h3>
+              <p>
+                I analyzed 2,500 Phase 1 records, then helped integrate them with weekly CDC
+                state data collected in Phase 2. My assigned analysis compared state death
+                rates, visualized weekly trends for the highest-volume states, and measured
+                relationships across the combined metrics.
+              </p>
+              <dl class="case-study-facts">
+                <div><dt>Pipeline</dt><dd>Collect, clean, integrate, explore, test</dd></div>
+                <div><dt>Inference</dt><dd>Welch's t-test and Cohen's d</dd></div>
+                <div><dt>Result</dt><dd>p = 0.391, negligible effect (d = -0.038)</dd></div>
+              </dl>
+            </div>
+            <div class="analysis-gallery">
+              <figure class="analysis-figure analysis-figure-wide">
+                <a href="assets/covid-analysis/weekly-cases.png" target="_blank">
+                  <img src="assets/covid-analysis/weekly-cases.png" alt="Weekly COVID-19 case trends for the top five states" loading="lazy">
+                </a>
+                <figcaption>Weekly case trends reveal distinct epidemic waves.</figcaption>
+              </figure>
+              <figure class="analysis-figure">
+                <a href="assets/covid-analysis/state-death-rate.png" target="_blank">
+                  <img src="assets/covid-analysis/state-death-rate.png" alt="Phase 1 state death rate compared with Phase 2 total deaths" loading="lazy">
+                </a>
+                <figcaption>Phase comparison across matched states.</figcaption>
+              </figure>
+              <figure class="analysis-figure">
+                <a href="assets/covid-analysis/vaccination-hypothesis.png" target="_blank">
+                  <img src="assets/covid-analysis/vaccination-hypothesis.png" alt="Age-group distribution by vaccination status" loading="lazy">
+                </a>
+                <figcaption>Age and vaccination hypothesis evaluation.</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+
+        <div class="project-browser reveal">
+          <p>More projects</p>
+          <div class="project-filters" aria-label="Filter projects">
+            <button class="active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-filter="java" aria-pressed="false">Java</button>
+            <button type="button" data-filter="web" aria-pressed="false">Web</button>
+          </div>
+        </div>
+
+        <div class="project-grid" aria-live="polite">
+          <article class="project-card reveal" data-category="java">
+            <p class="project-type">Java / MySQL / Swing</p>
+            <h3>Pharmacy Management System</h3>
+            <p>Desktop CRUD application with search, update, delete, auto-fill, and persistent inventory data.</p>
+            <a href="https://github.com/Mohamed66091/Pharmacy-Management-System" target="_blank" rel="noopener noreferrer" aria-label="View Pharmacy Management System on GitHub">View repository <span>-&gt;</span></a>
+          </article>
+          <article class="project-card reveal" data-category="java">
+            <p class="project-type">Java / MySQL / JDBC</p>
+            <h3>Barber Shop Appointment System</h3>
+            <p>Scheduling application with calendar input and real-time JDBC data handling.</p>
+            <a href="https://github.com/Mohamed66091/Barber-Shop-Management-System" target="_blank" rel="noopener noreferrer" aria-label="View Barber Shop Appointment System on GitHub">View repository <span>-&gt;</span></a>
+          </article>
+          <article class="project-card reveal" data-category="java">
+            <p class="project-type">Java / OOP / MySQL</p>
+            <h3>Student Record Management</h3>
+            <p>Modular information system with input validation, CRUD operations, and clean architecture.</p>
+            <a href="https://github.com/Mohamed66091/student-management-system" target="_blank" rel="noopener noreferrer" aria-label="View Student Record Management on GitHub">View repository <span>-&gt;</span></a>
+          </article>
+          <article class="project-card reveal" data-category="java">
+            <p class="project-type">Java / REST concepts</p>
+            <h3>RESTful API Simulation</h3>
+            <p>Console tool modeling GET, POST, PUT, and DELETE behavior and stateless communication.</p>
+            <a href="https://github.com/Mohamed66091/BackendAPISimulation" target="_blank" rel="noopener noreferrer" aria-label="View RESTful API Simulation on GitHub">View repository <span>-&gt;</span></a>
+          </article>
+          <article class="project-card reveal" data-category="java">
+            <p class="project-type">Java / Swing / File I/O</p>
+            <h3>School Management System</h3>
+            <p>Desktop school record system using Swing interfaces and file-based persistence.</p>
+            <a href="https://github.com/Mohamed66091/School-Managment-System" target="_blank" rel="noopener noreferrer" aria-label="View School Management System on GitHub">View repository <span>-&gt;</span></a>
+          </article>
+          <article class="project-card reveal" data-category="web">
+            <p class="project-type">Web / Interactive experience</p>
+            <h3>Gaming Project</h3>
+            <p>An interactive gaming-focused web project built to explore responsive interfaces and user interaction.</p>
+            <a href="https://github.com/Mohamed66091/Gaming-Project" target="_blank" rel="noopener noreferrer" aria-label="View Gaming Project on GitHub">View repository <span>-&gt;</span></a>
+          </article>
+          <article class="project-card reveal" data-category="web">
+            <p class="project-type">Web / Online storefront</p>
+            <h3>Food &amp; Beverage Online Shop</h3>
+            <p>A responsive storefront experience for browsing food and beverage products online.</p>
+            <a href="https://github.com/Mohamed66091/Online-Shop-for-Food-Becerage" target="_blank" rel="noopener noreferrer" aria-label="View Food and Beverage Online Shop on GitHub">View repository <span>-&gt;</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="section-number">03 / Skills</p>
+          <h2>A toolkit built for<br>the full problem.</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-group reveal">
+            <span>01</span><h3>Languages</h3>
+            <p>Python, Java, C, C++, SQL, JavaScript, HTML, CSS</p>
+          </article>
+          <article class="skill-group reveal">
+            <span>02</span><h3>AI &amp; Computer Vision</h3>
+            <p>YOLOv5, YOLOv8, PyTorch, Scikit-learn, OpenCV, transfer learning, data augmentation</p>
+          </article>
+          <article class="skill-group reveal">
+            <span>03</span><h3>Data Science</h3>
+            <p>Pandas, NumPy, Matplotlib, Seaborn, SciPy, hypothesis testing, web scraping, CRISP-DM</p>
+          </article>
+          <article class="skill-group reveal">
+            <span>04</span><h3>Software &amp; Backend</h3>
+            <p>OOP, JDBC, MySQL, MS Access, REST concepts, software architecture, Swing GUI</p>
+          </article>
+          <article class="skill-group reveal">
+            <span>05</span><h3>Tools &amp; Platforms</h3>
+            <p>Git, GitHub, Jupyter, VS Code, NetBeans, Streamlit, Kaggle, Roboflow, Figma, Excel</p>
+          </article>
+          <article class="skill-group reveal">
+            <span>06</span><h3>Languages Spoken</h3>
+            <p>Arabic - Native<br>English - Fluent<br>German - Intermediate</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journey-section" id="experience">
+      <div class="shell journey-grid">
+        <div class="section-heading reveal">
+          <p class="section-number">04 / Journey</p>
+          <h2>Learning in class,<br>building beyond it.</h2>
+          <p class="heading-note">
+            BSc (Hons) Informatics &amp; Computer Science, Artificial Intelligence pathway.
+            British University in Egypt, expected 2027.
+          </p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <p>2025-2026</p>
+            <div><h3>Computer Vision &amp; Data Science Projects</h3><span>British University in Egypt</span></div>
+          </article>
+          <article class="timeline-item reveal">
+            <p>Aug 2025</p>
+            <div><h3>ITI Training Program</h3><span>Information Technology Institute</span></div>
+          </article>
+          <article class="timeline-item reveal">
+            <p>Jul 2025</p>
+            <div><h3>Summer Training</h3><span>EgyptAir</span></div>
+          </article>
+          <article class="timeline-item reveal">
+            <p>40 hours</p>
+            <div><h3>Web Development Summer Camp</h3><span>Sprints x Microsoft</span></div>
+          </article>
+          <article class="timeline-item reveal">
+            <p>Experience</p>
+            <div><h3>Activation Team Member</h3><span>EL-Araby Group</span></div>
+          </article>
+          <article class="timeline-item reveal">
+            <p>Leadership</p>
+            <div><h3>PR Coordinator &amp; Committee Organizer</h3><span>BUE Student Union and First-Year Experience Committee</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="shell contact-inner reveal">
+        <p class="section-number">05 / Contact</p>
+        <h2>Have a problem worth<br><em>building for?</em></h2>
+        <p>I am currently open to software engineering, data science, and AI opportunities.</p>
+        <a class="contact-email" href="mailto:mohamedrezk66091@gmail.com">mohamedrezk66091@gmail.com <span>-&gt;</span></a>
+        <div class="contact-meta">
+          <span>Cairo, Egypt</span>
+          <a href="tel:+201023242250">+20 102 324 2250</a>
+          <a href="https://github.com/Mohamed66091" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/mohamed-rezk-aba5aa280/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Mohamed Rizk. All rights reserved.</p>
+    <div class="shell">
+      <p>&copy; <span id="year">2026</span> Mohamed Rizk</p>
+      <a href="#home">Back to top ^</a>
+    </div>
   </footer>
-
 </body>
 </html>

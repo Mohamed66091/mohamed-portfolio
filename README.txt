@@ -1,62 +1,37 @@
-# Mohamed Rizk – Portfolio Website
+# Mohamed Rizk - Portfolio
 
-This is a personal portfolio website built using HTML, CSS, and JavaScript.  
-It includes smooth scroll animations, a dark/light theme toggle, and responsive design.
+Personal portfolio for Mohamed Rizk, a Computer Science and AI student focused
+on backend development, data science, and computer vision.
 
----
+Live site:
+https://mohamed66091.github.io/mohamed-portfolio/
 
-## 🌐 Live Preview
+## Highlights
 
-To deploy it online using **GitHub Pages**:
+- Responsive single-page layout
+- Light and dark themes with saved preference
+- Accessible mobile navigation
+- Project, skills, education, training, and contact sections
+- Downloadable CV
+- Lightweight HTML, CSS, and JavaScript with no build step
 
-### 1. Create a GitHub repo (e.g., `mohamed-portfolio`)
-### 2. Upload all project files:
-- `index.html`
-- `style.css`
-- `script.js`
-- `aos.min.js`
-- `aos.min.css`
-- `profile.jpg`
+## Local Preview
 
-### 3. Enable GitHub Pages:
-- Go to **Settings** → **Pages**
-- Under **Source**, select `main` branch and root folder `/`
-- Click Save
+Run a local static server from this directory:
 
-Your site will be live at:  
-`https://your-username.github.io/your-repo-name`
+    py -m http.server 8000
 
----
+Then open:
 
-## 📁 Folder Structure
+    http://127.0.0.1:8000
 
-/portfolio-site/
-├── index.html
-├── style.css
-├── script.js
-├── aos.min.css
-├── aos.min.js
-├── profile.jpg
-└── README.md
+## Deployment
 
-less
-Copy
-Edit
+The site is compatible with GitHub Pages. Publish the repository's main branch
+from the root directory in Settings > Pages.
 
----
+## Contact
 
-## ✨ Features
-- Responsive layout
-- Animated scroll sections (AOS)
-- Dark/light mode switch
-- GitHub project showcase
-- Contact links (email, LinkedIn, GitHub)
-
----
-
-## 👤 Author
-**Mohamed Mahmoud Rizk**  
-Second-Year CS Student – BUE  
-[LinkedIn](https://linkedin.com/in/mohamed-rezk-aba5aa280/)  
-[GitHub](https://github.com/Mohamed66091)  
-[mohamedrezk66091@gmail.com](mailto:mohamedrezk66091@gmail.com)
+- GitHub: https://github.com/Mohamed66091
+- LinkedIn: https://www.linkedin.com/in/mohamed-rezk-aba5aa280/
+- Email: mohamedrezk66091@gmail.com
