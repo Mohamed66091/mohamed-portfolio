@@ -10,6 +10,10 @@ const sections = document.querySelectorAll("main section[id]");
 const navAnchors = document.querySelectorAll(".nav-links a");
 const filterButtons = document.querySelectorAll(".project-filters button");
 const projectCards = document.querySelectorAll(".project-card[data-category]");
+const siteCursor = document.querySelector(".site-cursor");
+let previousCursorX = 0;
+let previousCursorY = 0;
+let cursorAngle = 0;
 
 function setTheme(theme) {
   const useLight = theme === "light";
@@ -23,6 +27,51 @@ function setTheme(theme) {
 
 const savedTheme = localStorage.getItem("portfolio-theme");
 setTheme(savedTheme || (prefersLight.matches ? "light" : "dark"));
+
+window.addEventListener("pointermove", (event) => {
+  const deltaX = event.clientX - previousCursorX;
+  const deltaY = event.clientY - previousCursorY;
+  const speed = Math.min(Math.hypot(deltaX, deltaY), 40);
+  const targetAngle = Math.max(-10, Math.min(10, deltaX * 0.45));
+
+  cursorAngle += (targetAngle - cursorAngle) * 0.35;
+  siteCursor.style.setProperty("--cursor-angle", `${cursorAngle}deg`);
+  siteCursor.style.setProperty("--cursor-scale", String(1 + speed * 0.003));
+  siteCursor.classList.add("visible");
+  siteCursor.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
+  previousCursorX = event.clientX;
+  previousCursorY = event.clientY;
+});
+
+document.documentElement.addEventListener("mouseleave", () => {
+  siteCursor.classList.remove("visible");
+});
+
+window.addEventListener("pointerdown", () => {
+  siteCursor.classList.add("pressed");
+});
+
+window.addEventListener("pointerup", () => {
+  siteCursor.classList.remove("pressed");
+});
+
+document.querySelectorAll("a, button").forEach((element) => {
+  element.addEventListener("pointerenter", () => {
+    siteCursor.classList.add("over-link");
+  });
+  element.addEventListener("pointerleave", () => {
+    siteCursor.classList.remove("over-link");
+  });
+});
+
+document.querySelectorAll(".project-feature, .project-card, .data-case-study").forEach((card) => {
+  card.addEventListener("pointerenter", () => {
+    siteCursor.classList.add("over-card");
+  });
+  card.addEventListener("pointerleave", () => {
+    siteCursor.classList.remove("over-card");
+  });
+});
 
 themeToggle.addEventListener("click", () => {
   const nextTheme = body.classList.contains("light") ? "dark" : "light";
